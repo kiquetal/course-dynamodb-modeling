@@ -26,4 +26,3 @@ Allow arbitrary data in the collection.
 
 - Items are uniquely identifiable by a primary key, set at table creation time
 - Max item size:400kb
-
