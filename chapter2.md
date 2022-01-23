@@ -26,3 +26,43 @@ Allow arbitrary data in the collection.
 
 - Items are uniquely identifiable by a primary key, set at table creation time
 - Max item size:400kb
+
+
+
+##### Partitions and Sort Keys
+
+- Partition key/hash key
+- Sort key/range
+
+Combination must be unique
+
+##### Data types
+
+Scalar: number,string, binary, boolean and null
+timestamp in epoch time (numbers of seconds)
+
+Document:
+list and map
+
+Set: multiple scalar values of same types.
+no ordering/ not empty set
+
+#### Indexes
+
+Secondary indexes are data structures that contain a subset of attributes from
+a table, along with an alternate key to support query operations.
+
+Global Secondary Index( GSI): Index with a different
+partition and sort key from those on the base table.
+The primary key of a GSI can be either
+simple or composite
+
+Local Secondary Index(LSI) Index that has the
+same partition key as the base table,
+but a different sort key. The primary key
+of an LSI must be composite. It must be created
+at the time of table creation.
+
+GSI: Eventually consistent only
+LSI strongly or eventual consistent query
+
